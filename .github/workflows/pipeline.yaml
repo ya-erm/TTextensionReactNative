@@ -39,3 +39,9 @@ jobs:
 
       - name: Build web
         run: yarn build:web
+
+      - name: Archive build web artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-web
+          path: build-web

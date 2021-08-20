@@ -23,6 +23,9 @@ export default function SettingsScreen() {
         <SettingsItem>
           <Text>TODO</Text>
         </SettingsItem>
+        <SettingsItem>
+          <Text>TODO</Text>
+        </SettingsItem>
       </SettingsGroup>
     </ScrollView>
   );

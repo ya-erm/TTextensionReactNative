@@ -1,0 +1,31 @@
+{
+    "React component": {
+        "scope": "typescriptreact",
+        "prefix": "rc",
+        "body": [
+            "import { Text, View } from 'components/Themed';",
+            "import React from 'react';",
+            "import { StyleSheet } from 'react-native';",
+            "",
+            "type I${0:$TM_FILENAME_BASE}Props = {",
+            "}",
+            "",
+            "export default function ${0:$TM_FILENAME_BASE}({ }: I${0:$TM_FILENAME_BASE}Props) {",
+            "    return (",
+            "        <Text>Hello</Text>",
+            "    );",
+            "}",
+            "",
+            "const styles = StyleSheet.create({",
+            "  container: {},",
+            "});",
+            ""
+        ],
+        "description": "create OW specific component"
+    },
+    "useState": {
+        "scope": "typescript,typescriptreact",
+        "prefix": "us",
+        "body": "const [$1, set${1/(^.)(.*)/${1:/upcase}$2/}] = React.useState(${2|'',false|});"
+    }
+}

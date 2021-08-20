@@ -31,10 +31,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - name: Use Expo 3.x
+      - name: Use Expo 4.x
         uses: expo/expo-github-action@v5
         with:
-          expo-version: 3.x
+          expo-version: 4.x
+          expo-cache: true
 
       - name: Instal dependencies
         run: yarn install --frozen-lockfile

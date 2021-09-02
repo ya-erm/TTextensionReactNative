@@ -8,7 +8,9 @@
       "/components/*": ["components/*"],
       "/constants/*": ["constants/*"],
       "/hooks/*": ["hooks/*"],
-      "/screens/*": ["screens/*"]
+      "/models/*": ["models/*"],
+      "/screens/*": ["screens/*"],
+      "/utils/*": ["utils/*"]
     }
   }
 }

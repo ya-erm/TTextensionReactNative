@@ -20,6 +20,7 @@ export default {
           Settings: {
             screens: {
               SettingsScreen: 'settings',
+              SelectAccountScreen: 'settings/account',
             },
           },
         },

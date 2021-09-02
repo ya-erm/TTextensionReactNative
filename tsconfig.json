@@ -4,6 +4,7 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
+      "/api/*": ["api/*"],
       "/components/*": ["components/*"],
       "/constants/*": ["constants/*"],
       "/hooks/*": ["hooks/*"],

@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useStorage } from './useStorage';
+import { UserAccount } from '/api/client';
 
 export type ISettings = {
   token?: string;
-  account?: string;
+  account?: UserAccount;
 };
 
 const defaultSettings: ISettings = {};
 
-const settingsStorageKey = '@TTE_Settings';
+export const settingsStorageKey = '@TTE_Settings';
 
 export function useSettings() {
   const [settings, setSettings] = useState<ISettings>(defaultSettings);

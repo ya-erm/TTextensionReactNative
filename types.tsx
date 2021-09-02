@@ -19,4 +19,5 @@ export type TabPortfolioParamList = {
 
 export type TabSettingsParamList = {
   SettingsScreen: undefined;
+  SelectAccountScreen: undefined;
 };

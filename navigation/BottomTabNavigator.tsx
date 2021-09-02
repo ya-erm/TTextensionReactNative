@@ -6,6 +6,7 @@ import { BottomTabParamList, TabPortfolioParamList, TabSettingsParamList } from 
 import Colors from '/constants/Colors';
 import useColorScheme from '/hooks/useColorScheme';
 import PortfolioScreen from '/screens/PortfolioScreen';
+import SelectAccountScreen from '/screens/SelectAccountScreen';
 import SettingsScreen from '/screens/SettingsScreen';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
@@ -44,30 +45,35 @@ function TabBarIcon(props: { name: React.ComponentProps<typeof Ionicons>['name']
 
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
-const TabOneStack = createStackNavigator<TabPortfolioParamList>();
+const TabPortfolioStack = createStackNavigator<TabPortfolioParamList>();
 
 function TabPortfolioNavigator() {
   return (
-    <TabOneStack.Navigator>
-      <TabOneStack.Screen
+    <TabPortfolioStack.Navigator>
+      <TabPortfolioStack.Screen
         name="PortfolioScreen"
         component={PortfolioScreen}
         options={{ headerTitle: 'Portfolio' }}
       />
-    </TabOneStack.Navigator>
+    </TabPortfolioStack.Navigator>
   );
 }
 
-const TabTwoStack = createStackNavigator<TabSettingsParamList>();
+const TabSettingsStack = createStackNavigator<TabSettingsParamList>();
 
 function TabSettingsNavigator() {
   return (
-    <TabTwoStack.Navigator>
-      <TabTwoStack.Screen
+    <TabSettingsStack.Navigator>
+      <TabSettingsStack.Screen
         name="SettingsScreen"
         component={SettingsScreen}
         options={{ headerTitle: 'Settings' }}
       />
-    </TabTwoStack.Navigator>
+      <TabSettingsStack.Screen
+        name="SelectAccountScreen"
+        component={SelectAccountScreen}
+        options={{ headerTitle: 'Select account' }}
+      />
+    </TabSettingsStack.Navigator>
   );
 }

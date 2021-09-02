@@ -9,9 +9,18 @@ export type ISettingsItemProps = {
 };
 
 export default function SettingsItem({ children, isFirst, isLast }: ISettingsItemProps) {
+  const clone = React.cloneElement(children as React.ReactElement, {
+    style: [
+      {
+        paddingHorizontal: 15,
+        paddingVertical: 10,
+      },
+      (children as React.ReactElement)?.props?.style,
+    ],
+  });
   return (
     <>
-      <View style={{ paddingTop: isFirst ? 0 : 7, paddingBottom: isLast ? 0 : 7 }}>{children}</View>
+      {clone}
       {!isLast && <View style={styles.divider} />}
     </>
   );

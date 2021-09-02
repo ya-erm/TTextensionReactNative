@@ -40,8 +40,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   group: {
-    paddingHorizontal: 15,
-    paddingVertical: 10,
     borderRadius: 10,
   },
 });

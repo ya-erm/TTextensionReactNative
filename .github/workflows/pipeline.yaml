@@ -32,10 +32,11 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Use Expo 4.x
-        uses: expo/expo-github-action@v5
+        uses: expo/expo-github-action@v6
         with:
           expo-version: 4.x
           expo-cache: true
+          token: ${{ secrets.EXPO_TOKEN }}
 
       - name: Instal dependencies
         run: yarn install --frozen-lockfile
@@ -57,8 +58,4 @@ jobs:
           cname: ${{ secrets.CNAME_DOMAIN }}
 
       - name: Deploy to Expo
-        uses: BlueBaseJS/expo-deploy-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          EXPO_CLI_USERNAME: ${{ secrets.EXPO_USERNAME }}
-          EXPO_CLI_PASSWORD: ${{ secrets.EXPO_TOKEN }}
+        run: expo publish

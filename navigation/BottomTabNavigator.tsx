@@ -53,7 +53,7 @@ function TabPortfolioNavigator() {
       <TabPortfolioStack.Screen
         name="PortfolioScreen"
         component={PortfolioScreen}
-        options={{ headerTitle: 'Portfolio' }}
+        options={{ headerTitle: 'Portfolio', title: 'Portfolio' }}
       />
     </TabPortfolioStack.Navigator>
   );
@@ -67,12 +67,12 @@ function TabSettingsNavigator() {
       <TabSettingsStack.Screen
         name="SettingsScreen"
         component={SettingsScreen}
-        options={{ headerTitle: 'Settings' }}
+        options={{ headerTitle: 'Settings', title: 'Settings' }}
       />
       <TabSettingsStack.Screen
         name="SelectAccountScreen"
         component={SelectAccountScreen}
-        options={{ headerTitle: 'Select account' }}
+        options={{ headerTitle: 'Select account', title: 'Select account' }}
       />
     </TabSettingsStack.Navigator>
   );

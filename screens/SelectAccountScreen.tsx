@@ -60,7 +60,7 @@ export default function SelectAccountScreen() {
 const styles = StyleSheet.create({
   separator: {
     height: 1,
-    backgroundColor: 'lightGray',
+    backgroundColor: '#d3d3d3',
   },
   listItem: {
     paddingHorizontal: 15,

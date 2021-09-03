@@ -1,6 +1,6 @@
 import { Link, useNavigation } from '@react-navigation/native';
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 import { ScrollView, TextInput } from 'react-native-gesture-handler';
 import SettingsGroup from '/components/Settings/SettingsGroup';
 import SettingsItem from '/components/Settings/SettingsItem';
@@ -49,6 +49,10 @@ export default function SettingsScreen() {
 const styles = StyleSheet.create({
   textInput: {
     borderRadius: 10,
-    outlineStyle: 'none',
+    ...Platform.select({
+      web: {
+        outlineStyle: 'none',
+      },
+    }),
   },
 });

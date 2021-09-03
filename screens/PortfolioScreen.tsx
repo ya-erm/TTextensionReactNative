@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   separator: {
-    backgroundColor: 'lightgray',
+    backgroundColor: '#d3d3d3',
     height: 1,
   },
 });

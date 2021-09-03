@@ -55,3 +55,10 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: web-build
           cname: ${{ secrets.CNAME_DOMAIN }}
+
+      - name: Deploy to Expo
+        uses: BlueBaseJS/expo-deploy-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EXPO_CLI_USERNAME: ${{ secrets.EXPO_USERNAME }}
+          EXPO_CLI_PASSWORD: ${{ secrets.EXPO_TOKEN }}
